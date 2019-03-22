@@ -1,0 +1,57 @@
+[I 190125 02:46:22 command:139] Visit me at http://0.0.0.0:5555
+[I 190125 02:46:22 command:144] Broker: redis://192.168.30.152:6381/0
+[I 190125 02:46:22 command:147] Registered tasks: 
+    ['celery.backend_cleanup',
+     'celery.chain',
+     'celery.chord',
+     'celery.chord_unlock',
+     'celery.chunks',
+     'celery.group',
+     'celery.map',
+     'celery.starmap',
+     'course-task',
+     'cycle-task',
+     'time-task']
+[I 190125 02:46:23 mixins:231] Connected to redis://192.168.30.152:6381/0
+[W 190125 02:46:27 control:44] 'stats' inspect method failed
+[W 190125 02:46:27 control:44] 'active_queues' inspect method failed
+[W 190125 02:46:27 control:44] 'registered' inspect method failed
+[W 190125 02:46:27 control:44] 'scheduled' inspect method failed
+[W 190125 02:46:27 control:44] 'active' inspect method failed
+[W 190125 02:46:27 control:44] 'reserved' inspect method failed
+[W 190125 02:46:27 control:44] 'revoked' inspect method failed
+[W 190125 02:46:27 control:44] 'conf' inspect method failed
+[W 190125 02:46:27 web:1667] 404 GET /broker (192.168.31.46): Unable to get queues: ''str' object has no attribute 'name''
+[W 190125 02:46:36 web:1667] 404 GET /broker (192.168.31.46): Unable to get queues: ''str' object has no attribute 'name''
+[W 190125 02:46:54 web:1667] 404 GET /broker (192.168.31.46): Unable to get queues: ''str' object has no attribute 'name''
+[W 190125 02:47:10 web:1667] 404 GET /broker (192.168.31.46): Unable to get queues: ''str' object has no attribute 'name''
+[W 190125 02:47:37 web:1667] 404 GET /broker (192.168.31.46): Unable to get queues: ''str' object has no attribute 'name''
+[W 190125 02:47:39 web:1667] 404 GET /broker (192.168.31.46): Unable to get queues: ''str' object has no attribute 'name''
+[W 190125 02:47:44 web:1667] 404 GET /broker (192.168.31.46): Unable to get queues: ''str' object has no attribute 'name''
+[I 190125 02:47:56 command:47] SIGTERM detected, shutting down
+[E 190125 02:47:56 http1connection:55] Uncaught exception
+    Traceback (most recent call last):
+      File "/home/jerd/env/envpy3/lib/python3.6/site-packages/tornado/http1connection.py", line 238, in _read_message
+        delegate.finish()
+      File "/home/jerd/env/envpy3/lib/python3.6/site-packages/tornado/routing.py", line 256, in finish
+        self.delegate.finish()
+      File "/home/jerd/env/envpy3/lib/python3.6/site-packages/tornado/web.py", line 2190, in finish
+        if self.stream_request_body:
+      File "/home/jerd/env/envpy3/lib/python3.6/site-packages/flower/command.py", line 48, in sigterm_handler
+        sys.exit(0)
+    SystemExit: 0
+[I 190125 02:48:08 command:139] Visit me at http://0.0.0.0:5555
+[I 190125 02:48:08 command:144] Broker: redis://192.168.30.152:6381/0
+[I 190125 02:48:08 command:147] Registered tasks: 
+    ['celery.backend_cleanup',
+     'celery.chain',
+     'celery.chord',
+     'celery.chord_unlock',
+     'celery.chunks',
+     'celery.group',
+     'celery.map',
+     'celery.starmap',
+     'course-task',
+     'cycle-task',
+     'time-task']
+[I 190125 02:48:08 mixins:231] Connected to redis://192.168.30.152:6381/0
