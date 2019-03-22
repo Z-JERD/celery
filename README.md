@@ -1,8 +1,8 @@
 celery4.0 以上的已经不支持windows了
 安装 pip3 install celery==3.1
-参考文档:http://docs.celeryproject.org/en/latest/userguide/application.html
+### 参考文档:http://docs.celeryproject.org/en/latest/userguide/application.html
          http://www.pythondoc.com/flask-celery/first.html
-mooc视频：https://www.imooc.com/video/17957
+### mooc视频：https://www.imooc.com/video/17957
           https://github.com/cnych/celery-learning/blob/master/imooc/conf/
 ## celery的使用
 1.celery是什么？
