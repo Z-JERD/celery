@@ -5,10 +5,10 @@ celery4.0 以上的已经不支持windows了
 ### mooc视频：https://www.imooc.com/video/17957
           https://github.com/cnych/celery-learning/blob/master/imooc/conf/
 ## celery的使用
-1.celery是什么？
+#### 1.celery是什么？
     Celery是由Python开发的一个简单、灵活、可靠的分布式任务队列，它不仅支持实时处理也支持任务调度。依赖于消息队列
 
-2.Celery的架构:
+#### 2.Celery的架构:
     Celery由三部分组成。消息中间件（message broker），任务执行单元（worker）和任务执行结果存储（task result store）
     每当应用程序调用celery的异步任务的时候，会向broker传递消息，而后celery的worker将会取到消息，进行程序执行
     消息中间件：
@@ -19,7 +19,7 @@ celery4.0 以上的已经不支持windows了
         Task result store用来存储Worker执行的任务的结果，Celery支持以不同方式存储任务的结果，
         包括 Redis，memcached, MongoDB，SQLAlchemy
 
-3.celery解决了什么问题？
+#### 3.celery解决了什么问题？
         - 熬夜问题
         - 等待时间长
         通常使用它来实现异步任务（async task）和定时任务（crontab）
@@ -27,10 +27,10 @@ celery4.0 以上的已经不支持windows了
         - 立即执行
         - 一次定时执行
         - 周期性定时执行（crontab）
-4.celery和tornado的异步非阻塞的区别？
+#### 4.celery和tornado的异步非阻塞的区别？
         tornado，程序和第三方做IO请求多。
         celery，程序后台或和第三发做大量的耗时操作（IO、计算）
-6.异步执行任务：
+#### 5.异步执行任务：
         1.定义:tasks.py
             app = Celery('tasks', broker='redis://127.0.0.1:6379', backend='redis://127.0.0.1:6379')
             @app.task
@@ -51,7 +51,7 @@ celery4.0 以上的已经不支持windows了
             if async.successful():
                 result = async.get()
                 async.forget() # 将结果删除
-7. 周期执行和定时开启任务
+#### 6. 周期执行和定时开启任务
            CELERYBEAT_SCHEDULE = {
                 'task1_scheduler': {
                     'task': 'celery_app.task1.task_add',
@@ -70,7 +70,7 @@ celery4.0 以上的已经不支持windows了
               使用4.2版本
 
 
-8.celery的配置参数：
+#### 7.celery的配置参数：
 
     CELERY_BROKER_URL = 'redis://localhost:6379/0'    Broker 地址
     CELERY_RESULT_BACKEND = 'redis://localhost:6379/0' 结果存储地址
@@ -93,7 +93,7 @@ celery4.0 以上的已经不支持windows了
     CELERYD_FORCE_EXECV = True  #防止死锁
 
 
-9.在Django中集成Cerely
+#### 8.在Django中集成Cerely
     pip install celery
     pip install django-celery
     需要注意版本兼容：Celery 4.0只支持Django1.8以上的版本
@@ -132,7 +132,7 @@ celery4.0 以上的已经不支持windows了
             解决方法：更换redis版本
         3.使用celery4.2 运行worker出错，原因未知
 
-10.celery监控工具 flower
+#### 9.celery监控工具 flower
     pip install flower
     启动flower：
         1.指定broker并启动
